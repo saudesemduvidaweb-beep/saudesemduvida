@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  verification: {
+    google: "SaNUA6Ep-JSlYQ5fE4ONv4vFMfWfMEB35bbj877h-to",
+  },
 };
 
 export default function RootLayout({
