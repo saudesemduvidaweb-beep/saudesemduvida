@@ -5,6 +5,12 @@ import { planTypes } from "@/lib/plans-data";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://saudesemduvida.com.br";
 
+// Regenera o sitemap no maximo 1x por hora (ISR), em vez de ficar
+// congelado no snapshot do ultimo deploy. Assim, conforme cada post
+// agendado atinge a data de publicacao, ele entra no sitemap sozinho,
+// sem precisar de novo deploy.
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes = [
     "",
