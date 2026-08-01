@@ -5,7 +5,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://saudesemduvida.com.
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/studio", "/campanha"] },
+      { userAgent: "*", allow: "/", disallow: ["/studio", "/campanha", "/lp"] },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };
