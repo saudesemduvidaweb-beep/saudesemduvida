@@ -7,6 +7,19 @@ export const siteConfig = {
   ctaHref: "/cotacao",
 };
 
+// Numero de WhatsApp que recebe os leads das landing pages de campanha
+// (Google Ads etc.). Formato internacional sem espacos/simbolos.
+export const whatsappNumber = "5562991547627";
+
+// Monta o link do WhatsApp com mensagem pre-preenchida. O parametro `ref`
+// (opcional) entra no texto pra quem responder saber de qual campanha/anuncio
+// o lead veio, sem precisar de nenhuma ferramenta de analytics.
+export function buildWhatsAppLink(ref?: string) {
+  const base = "Olá! Vim do anúncio do Saúde Sem Dúvida e quero uma cotação gratuita de plano de saúde.";
+  const text = ref ? `${base} (ref: ${ref})` : base;
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+}
+
 export const mainNav = [
   { title: "Como funciona", href: "/como-funciona" },
   {
