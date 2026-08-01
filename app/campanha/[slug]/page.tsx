@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 import { WhatsAppSticky } from "@/components/whatsapp-sticky";
-import { complianceNote, siteConfig } from "@/lib/site-config";
+import { Logo } from "@/components/logo";
+import { complianceNote } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Cotação gratuita de plano de saúde",
@@ -44,7 +45,7 @@ export default async function CampanhaPage({
     <div className="flex min-h-screen flex-col items-center bg-gradient-to-b from-muted/50 to-background px-6 py-12 pb-24 sm:pb-12">
       <div className="w-full max-w-md">
         <div className="flex flex-col items-center gap-2">
-          <p className="text-lg font-semibold">{siteConfig.name}</p>
+          <Logo />
           <span className="inline-flex items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
             <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
               <path

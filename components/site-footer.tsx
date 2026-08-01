@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/logo";
 import { complianceNote, mainNav, siteConfig } from "@/lib/site-config";
 
 export function SiteFooter() {
@@ -7,7 +8,7 @@ export function SiteFooter() {
       <div className="container py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <p className="text-lg font-semibold">{siteConfig.name}</p>
+            <Logo />
             <p className="mt-2 text-sm text-muted-foreground">
               {siteConfig.description}
             </p>
